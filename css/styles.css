@@ -115,7 +115,7 @@ nav ul li a:active{
 
 .hero{
     height: 800px;
-    background-image: url("/images/hero_5.jpg");
+    background-image: url("/images/hero_9.jpg");
     background-position:  center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -133,7 +133,7 @@ nav ul li a:active{
     inset: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.8);
     z-index: 1;
 }
 
@@ -345,7 +345,7 @@ span:hover{
    ===============================
 */
 .experience{
-    padding: 60px 0;
+    padding: 60px 495px;
     text-align: center;
 }
 
@@ -360,10 +360,10 @@ span:hover{
 
 .exp-container{
     display: grid;
-    flex-wrap: wrap;
-    gap:25px;
-    justify-content: space-evenly;
-    align-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 40px;
+    padding: 20px 0;
+    justify-items: center;
 }
 
 .exp-box{
@@ -585,6 +585,12 @@ footer{
         line-height: 1.3em;
         text-align: center;
         font-size: 1em;
+    }
+
+
+    /* Experience */
+    .exp-container{
+        grid-template-columns: 1fr;
     }
 }
 
