@@ -37,12 +37,17 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 450px;
+    
     position: sticky;
     top: 0;
     z-index: 1000;
     outline: 1.5px solid var(--soft-outline);
     background-color: #000000;
+
+    padding: 25px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
 
 }
 
@@ -115,7 +120,7 @@ nav ul li a:active{
 
 .hero{
     height: 800px;
-    background-image: url("images/hero_9.jpg");
+    background-image: url("./images/hero_9.jpg");
     background-position:  center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -345,8 +350,10 @@ span:hover{
    ===============================
 */
 .experience{
-    padding: 60px 495px;
+    padding: 60px 40px;
     text-align: center;
+    margin:  0 auto;
+    max-width: 1200px;
 }
 
 .experience h2{
@@ -360,7 +367,7 @@ span:hover{
 
 .exp-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 25px 40px;
     padding: 20px 0;
     justify-items: center;
@@ -491,9 +498,52 @@ footer{
 
 
 /* ===============================
+    Tablet + Small Laptop Nav Fix
+   =============================== */
+@media only screen and (max-width: 1024px) {
+
+    /* reduce huge header padding */
+    header {
+        padding: 20px 40px;
+    }
+
+    /* show hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    /* hide regular nav */
+    nav ul {
+        display: none;
+    }
+
+    /* dropdown */
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 40px;
+        background-color: #111;
+        padding: 20px;
+        border-radius: 10px;
+        gap: 15px;
+        z-index: 999;
+    }
+}
+
+
+/* ===============================
     Mobile Styles up to 480 pixels
    =============================== */
 @media only screen and (max-width: 480px) {
+
+    header{
+        
+    }
 
     header h1 a {
         text-align: center;
@@ -593,7 +643,6 @@ footer{
         grid-template-columns: 1fr;
     }
 }
-
 
 
 
