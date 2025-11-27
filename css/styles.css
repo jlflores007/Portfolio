@@ -1,0 +1,630 @@
+:root {
+    --accent: #FF4C4C;
+    --text-light: #E0E0E0;
+    --soft-outline:#ffffff; 
+}
+/* ===============================
+	General Styles for All 
+   ===============================
+*/
+html{
+    background-color: #000000;
+    color:#ffffff; 
+    scroll-behavior: smooth;
+    line-height: 1.4em;
+        background-image: linear-gradient(to bottom right, black,white);
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.07em;
+    line-height: 1.55em;
+    max-width: 1024px;
+    margin: 0px auto;
+
+}
+
+
+
+
+/* ===============================
+	Header Style
+   ===============================
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    outline: 1.5px solid var(--soft-outline);
+    background-color: #000000;
+}
+
+header h1{
+    font-size: 1.65em;
+}
+
+header h1 a{
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header h1 a:hover{
+    color: var(--text-light);
+}
+
+header h1 a:active{
+    color: var(--accent);
+}
+
+header h1 a:hover{
+    color:  var(--text-light);
+}
+
+/* ===============================
+	Nav Style
+   ===============================
+*/
+
+.hamburger{
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+nav ul li a{
+    padding: 8px 12px;
+    transition: 0.3s;
+    color:#ffffff; 
+    font-size: 1.35em;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: #C9C8BF;
+}
+
+nav ul li a:active{
+    color: var(--accent);
+}
+
+
+
+/* ===============================
+	Main Style
+   ===============================
+*/
+
+
+/* ===============================
+	 Hero Section 
+   ===============================
+*/
+
+.hero{
+    height: 800px;
+    background-image: url("/images/hero_.jpg");
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+}
+
+
+
+
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.75);
+    z-index: 1;
+}
+
+
+
+
+#hero-container{
+    position: relative;
+    z-index: 2;
+    
+    display: flex;
+    height: auto;
+    min-height: 650px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap:25px;
+    padding-top: 40px;
+}
+
+
+
+
+.intro-text{
+    width: 400px;
+    font-size: 1.5em;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+}
+
+.intro-text h2{
+    font-size: 2em;
+    padding: 15px 0;
+}
+
+
+.intro-text p{
+    padding-top: 10px;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+
+
+span{
+    color: var(--accent);
+    font-weight: bold;
+}
+
+span:hover{
+    cursor: pointer;
+}
+
+
+/* TypeWriter */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid #ffffff; 
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        typing 2.5s steps(12, end) forwards,
+        blinker 0.7s step-end infinite;
+}
+
+
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 63%;}
+}
+
+@keyframes blinker {
+    from, to { border-color: transparent;}
+    50% {border-color: #f2f2f2;}
+    
+}
+
+
+
+/* Links & Button Container */
+.media_container{
+    display: flex;
+    flex-direction: column;
+    height: 575px;
+    justify-content:flex-end;
+    align-content: center;
+}
+
+
+/* Download Button */
+.btn_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0 20px 0;
+    margin-top: 15px;
+}
+
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    border-radius: 50px;
+    color: #f2f2f2;
+    background-color: transparent;
+    outline: 2px solid #f2f2f2;
+    font-size: 0.8em;
+    transition: 0.3s ease;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.btn img{
+    filter: invert(1);
+    width: 30px;
+    height: 30px;
+}
+.btn:hover{
+    background-color: #2B2B2B;
+    outline-color: #fff;
+    color: #f2f2f2;
+    transform: translateY(-3px);
+    filter: invert(1);
+}
+
+/* ===============================
+	Flip Card Style 
+   ===============================
+*/
+.card{
+    width: 425px;
+    height: 700px;
+    max-width: 90vw;
+    cursor: pointer;
+    perspective: 1000px;
+}
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(0deg);
+}
+
+
+.card-front{
+    transform: rotateY(180deg);
+}
+
+.card-front img, .card-back img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+
+/* ===============================
+	Social Media Links
+   ===============================
+*/
+
+.links_container{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.links_container a{
+    text-decoration: none;
+    color:#f2f2f2;
+}
+
+.links_container img{
+    height: 45px;
+    width: auto;
+    transition: 0.2s ease;
+}
+
+.links_container img:hover{
+    transform: translateY(-3px);
+    filter: brightness(1.5);
+}
+
+
+/* ===============================
+	Experience Style
+   ===============================
+*/
+.experience{
+    padding: 60px 0;
+    text-align: center;
+}
+
+.experience h2{
+    margin-bottom: 30px;
+    font-size: 2em;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.exp-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:25px;
+    justify-content: center;
+}
+
+.exp-box{
+    border: 2px solid #e6e6e6;
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 450px;
+    width: 100%;
+    transition: 0.3s ease;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.exp-box:hover{
+    transform: translateY(-5px);
+    background-color: #212121;
+}
+
+.exp-box h3{
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.exp-date{
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.exp-box ul{
+    padding-left: 20px;
+}
+
+.exp-box li{
+    margin-bottom: 8px;
+    font-size: 1em;
+    
+}
+
+
+/* ===============================
+	Education Style
+   ===============================
+*/
+.education{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section-title{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.section-title img{
+    width: 60px;
+    height: auto;
+    filter: invert(1);
+
+}
+
+
+.education h2{
+    font-size: 2em;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+#edu-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:25px;
+    padding: 0 20px;
+}
+
+.edu-box{
+    outline: 2px solid #f2f2f2;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    cursor: pointer;
+    background-color: #181818;
+    padding: 20px;
+    max-width: 450px;
+    width: 100%;
+}
+
+.edu-box:hover{
+    transform: translateY(-3px);
+    background-color: #212121;
+    transition: 0.3s ease;
+}
+
+.edu-box h3{
+    font-size: 1.2em;
+}
+
+.edu-date{
+    color: #aaa;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.edu-box p{
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+
+
+
+/* ===============================
+	Footer Style
+   ===============================
+*/
+footer{
+    text-align: center;
+}
+
+
+/* ===============================
+    Mobile Styles up to 480 pixels
+   =============================== */
+@media only screen and (max-width: 480px) {
+
+    header h1 a {
+        text-align: center;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Nav Menu */
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #1e1e2f;
+        padding: 20px;
+        border-radius: 8px;
+        gap: 10px;
+    }
+
+    .nav-menu.active a {
+        text-align: center;
+        margin: 8px 0;
+    }
+
+    /* ============================================
+        Hero Section
+       ============================================ */
+
+    #hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Force order: text first, card second */
+    .intro-text {
+        order: 1;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: auto;
+    }
+
+    .card {
+        order: 2;
+        width: 260px;
+        height: 350px;
+    }
+
+    /* Typewriter text adjustments */
+    .intro-text h2 {
+        font-size: 1.5em;
+        padding: 15px 0;
+    }
+
+    .intro-text p {
+        padding-top: 10px;
+        line-height: 1.3em;
+        text-align: center;
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+
+
+/* ============================================
+	Animations 
+   ============================================
+*/
+
+.animate-text {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.animate-text.delay {
+  animation-delay: 0.5s;
+}
+
+.animate-text.delay2 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+.animate-feature {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.animate-feature.delay {
+  animation-delay: 0.3s;
+}
+
+.animate-feature.delay2 {
+  animation-delay: 0.6s;
+}

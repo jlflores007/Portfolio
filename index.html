@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Snake007 | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Emblema+One&family=Lato:wght@300;400;700&family=Lora:wght@400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1><a class="animate-text" href="index.html">Snake007</a></h1>
+        <nav>
+            <!-- Mobile Drop Down Menu-->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="animate-text" href="index.html">Home</a></li>
+                <li><a class="animate-text" href="#">Projects</a></li>
+                <li><a class="animate-text" href="#">Notes</a></li>
+                <li><a class="animate-text" href="#">Art</a></li>
+                <li><a class="animate-text" href="#">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div id="hero-container">
+                <div class="intro-text">
+                    <h2 class="typewriter">Hi, I am</h2>
+                    <p class="animate-text">Cybersecurity Student <br> Inspiring <span id="troll">Pentester</span></p>
+
+
+                    
+                     <!-- Social Media Links Buttons -->
+                    <div class="media_container">
+                        <div class="links_container animate-feature">
+                            <a href="https://github.com/jlflores007" class="links_btn" target="_blank"><img src="images/github-mark-white.png" alt="github logo"></a>
+                            <a href="https://www.linkedin.com/in/jorge-flores-21b013162/" class="links_btn" target="_blank"><img src="images/InBug-White.png" alt="LinkedIn Logo"></a>
+                            <a href="https://app.hackthebox.com/profile/2089133" class="links_btn" target="_blank"><img src="images/Hackthebox_2.png" alt="HackTheBox Logo"></a>
+                        </div>
+
+                        <!-- Download Button -->
+                        <div class="btn_container animate-feature">
+                            <a class="btn" href="#" target="_blank">
+                                DOWNLOAD CV<img src="/images/download_btn.png" alt="download button" aria-label="Download my resume">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
+
+                 <!-- Card Flip -->
+                <div class="card animate-feature" id="yugiohCard">
+                    <div class="card-inner">
+
+                        <!-- Front -->
+                        <div class="card-front">
+                            <img src="images/Jorge Flores.jpeg" alt="Portrait of Jorge Flores">
+                        </div>
+
+                        <!-- Back -->
+                        <div class="card-back">
+                            <img src="images/highRes_back_Card.png" alt="Yu-Gi-Oh style card back">
+                        </div>
+                    </div>
+                </div>
+                <!-- Sound for card -->
+                <audio id="flipSound">
+                    <source src="media/flip.ogg" type="audio/ogg">
+                </audio>
+            </div>
+        </section>
+
+        
+            <!-- Experience -->
+            <section class="experience">
+                <h2>Experience</h2>
+
+                <div class="exp-container">
+
+                    <!-- Food Depository -->
+                     <div class="exp-box">
+                        <h3> Data Analyst - GCFD</h3>
+                        <p class="exp-date"> July 2025 - Present</p>
+                        <ul>
+                            <li></li>
+                        </ul>
+                     </div>
+
+                    <!-- United Airlines -->
+                    <div class="exp-box">
+                        <h3>Data Analyst - United Airlines</h3>
+                        <p class="exp-date">Feb 2024 - Aug 2024</p>
+                        <ul>
+                            <li>Developed advanced SQL queries (JOINs, subqueries, aggregates) in PostgreSQL/DBeaver to analyze large customer flight datasets and deliver strategic insights.</li>
+                            <li>Created data visualizations in Excel (pivot tables, charts) and PowerPoint to clearly present sales trends, customer behavior, and operational metrics to stakeholders.</li>
+                            <li>Cleaned, transformed, and loaded CSV data into AWS UDH cloud tables, ensuring accurate and reliable datasets for stakeholders.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tiktok -->
+                    <div class="exp-box">
+                        <h3>Content Creator - Tiktok</h3>
+                        <p class="exp-date"> Jan 2021 - Jan 2022</p>
+                        <ul>
+                            <li>Generated 2M+ total video views and built a following of 14K users.</li>
+                            <li>Leveraged TikTok algorithm knowledge to optimize reach and engagement.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Entry -->
+                     <div class="exp-box">
+                        <h3>Data Entry - Muchin College Prep</h3>
+                        <p class="exp-date">June 2015 - Aug 2015</p>
+                        <ul>
+                            <li>Collaborated with other departments to determine relevant material</li>
+                            <li>Reviewed incoming resumes to verify qualifications, education, and experience met hiring requirements.</li>
+                            <li>Efficiently utilized Excel to populate and maintain the recruitment team database for recruitment and hiring</li>
+                        </ul>
+
+                     </div>
+                </div>
+            </section>
+
+
+
+            <!-- Education -->
+             <section class="education">
+                <h2>Education</h2>
+
+
+                <div id="edu-container">
+
+                    <!-- Wilbur -->
+                    <div class="edu-box">
+                        <h3>AAS - Cybersecurity</h3>
+                        <p>Wilbur Wright college</p>
+                        <p class="edu-date">Aug 2023 - June 2026</p>
+                        <p>GPA: 3.2</p>
+                        <p>Award: Presidential Scholar</p>
+                    </div>
+                    <!-- Year Up -->
+                    <div class="edu-box">
+                        <h3>Data Analytics Trainee</h3>
+                        <p>Year Up Program</p>
+                        <p class="edu-date">Aug 2023 - Aug 2024</p>
+                        <p>Earned 31 ACE College Credits</p>
+                    </div>
+                </div>
+             </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Jorge Flores &copy; 2025 All Rights Reserved</p>
+        </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
