@@ -18,78 +18,87 @@
 
 <body>
     <!-- Header -->
-    <header>
-        <h1><a class="animate-text" href="index.html">Snake007</a></h1>
-        <nav>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a class="animate-text" href="index.html">Home</a></li>
-                <li><a class="animate-text" href="#">Projects</a></li>
-                <li><a class="animate-text" href="#">Notes</a></li>
-                <li><a class="animate-text" href="#">Art</a></li>
-                <li><a class="animate-text" href="#">About Me</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="wrapper">
+            <h1><a class="animate-text" href="index.html">Snake007</a></h1>
 
-        <!-- Mobile Drop Down Menu-->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <!-- Nav -->
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a class="animate-text" href="index.html">Home</a></li>
+                    <li><a class="animate-text" href="#">Projects</a></li>
+                    <li><a class="animate-text" href="#">Notes</a></li>
+                    <li><a class="animate-text" href="#">Art</a></li>
+                    <li><a class="animate-text" href="#">About Me</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Drop Down Menu-->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div id="hero-container">
-                <div class="intro-text">
-                    <h2 class="typewriter">Hi, I am</h2>
-                    <p class="animate-text">Cybersecurity Student <br> Inspiring <span id="troll">Pentester</span></p>
+<main id="main-content">
+    <section class="hero">
+        <div id="hero-container">
 
+            <!-- LEFT -->
+            <div class="left-column">
 
-                    
-                     <!-- Social Media Links Buttons -->
-                    <div class="media_container">
-                        <div class="links_container animate-feature">
-                            <a href="https://github.com/jlflores007" class="links_btn" target="_blank"><img src="images/github-mark-white.png" alt="github logo"></a>
-                            <a href="https://www.linkedin.com/in/jorge-flores-21b013162/" class="links_btn" target="_blank"><img src="images/InBug-White.png" alt="LinkedIn Logo"></a>
-                            <a href="https://app.hackthebox.com/profile/2089133" class="links_btn" target="_blank"><img src="images/Hackthebox_2.png" alt="HackTheBox Logo"></a>
-                        </div>
+                <h2 class="typewriter" id="intro-text">Hi, I am</h2>
 
-                        <!-- Download Button -->
-                        <div class="btn_container animate-feature">
-                            <a class="btn" role="button" href="#" target="_blank">
-                                DOWNLOAD CV<img src="images/download_btn.png" alt="download resume icon" aria-label="Download my resume">
-                            </a>
-                        </div>
+                <p class="animate-text" id="role-text">
+                    Cybersecurity Student <br> Inspiring <span id="troll">Pentester</span>
+                </p>
+
+                <div class="media_container" id="media">
+                    <div class="links_container animate-feature">
+                        <a href="https://github.com/jlflores007" target="_blank">
+                            <img src="images/github-mark-white.png" alt="github logo">
+                        </a>
+                        <a href="https://www.linkedin.com/in/jorge-flores-21b013162/" target="_blank">
+                            <img src="images/InBug-White.png" alt="LinkedIn Logo">
+                        </a>
+                        <a href="https://app.hackthebox.com/profile/2089133" target="_blank">
+                            <img src="images/Hackthebox_2.png" alt="HackTheBox Logo">
+                        </a>
+                    </div>
+
+                    <div class="btn_container animate-feature">
+                        <a class="btn" href="#" target="_blank">
+                            DOWNLOAD CV
+                            <img src="images/download_btn.png" alt="download resume icon">
+                        </a>
                     </div>
                 </div>
-                    
+            </div>
 
-                 <!-- Card Flip -->
+            <!-- RIGHT -->
+            <div class="right-column">
                 <div class="card animate-feature" id="yugiohCard">
                     <div class="card-inner">
-
-                        <!-- Front -->
                         <div class="card-front">
-                            <img src="images/Yugioh_Front.png" alt="Portrait of Jorge Flores" loading="lazy">
+                            <img src="images/Yugioh_Front.png" alt="Portrait of Jorge Flores">
                         </div>
-
-                        <!-- Back -->
                         <div class="card-back">
-                            <img src="images/highRes_back_Card.png" alt="Yu-Gi-Oh style card back" loading="lazy">
+                            <img src="images/highRes_back_Card.png" alt="Yu-Gi-Oh style card back">
                         </div>
                     </div>
                 </div>
-                <!-- Sound for card -->
                 <audio id="flipSound">
                     <source src="media/flip.ogg" type="audio/ogg">
                 </audio>
             </div>
-        </section>
+        </div>
+    </section>
 
-        
+
+
             <!-- Experience -->
             <section class="experience">
                 <h2>Experience</h2>

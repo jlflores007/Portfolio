@@ -33,43 +33,37 @@ body{
 	Header Style
    ===============================
 */
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.site-header{
     
+    padding: 20px 0;
+    width: 100%;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    outline: 1.5px solid var(--soft-outline);
-    background-color: #000000;
-
-    padding: 25px 40px;
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-
+    background: #000000;
+    z-index: 1200;
+    border-bottom: 1px solid var(--soft-outline);
 }
 
-header h1{
+.site-header h1{
     font-size: 1.65em;
 }
 
-header h1 a{
+.site-header h1 a{
     list-style: none;
     text-decoration: none;
     color: #ffffff;
 }
 
-header h1 a:hover{
+.site-header h1 a:hover{
     color: var(--text-light);
 }
 
-header h1 a:active{
+.site-header h1 a:active{
     color: var(--accent);
 }
 
-header h1 a:hover{
+.site-header h1 a:hover{
     color:  var(--text-light);
 }
 
@@ -77,6 +71,16 @@ header h1 a:hover{
 	Nav Style
    ===============================
 */
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
 
 .hamburger{
     display: none;
@@ -119,18 +123,13 @@ nav ul li a:active{
 */
 
 .hero{
-    height: 800px;
-    background-image: url("./images/hero_9.jpg");
+    height: 855px;
+    background-image: url("../images/hero_9.jpg");
     background-position:  center;
     background-repeat: no-repeat;
     background-size:cover;
     position: relative;
 }
-
-
-
-
-
 
 .hero::before {
     content: "";
@@ -148,50 +147,54 @@ nav ul li a:active{
 #hero-container{
     position: relative;
     z-index: 2;
-    
+
     display: flex;
-    height: auto;
-    min-height: 650px;
-    flex-wrap: wrap;
-    align-content: center;
+    flex-direction:row;
     justify-content: center;
-    gap:25px;
+    gap: 40px;
+    height: max-content;
     padding-top: 40px;
+
 }
 
-
-
-
-.intro-text{
-    width: 400px;
-    font-size: 1.5em;
-    padding: 25px 0;
+.left-column {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 700px;
+    width: 400px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 0;
+    font-size: 1.5em;
+    
+    max-width: 500px;
+    text-align: left;
 }
 
-.intro-text h2{
+#intro-text{
     font-size: 2em;
     padding: 15px 0;
 }
 
-
-.intro-text p{
-    padding-top: 10px;
-    line-height: 1.3em;
+#role-text{
     text-align: center;
+    line-height: 1.3em;
+    padding-top: 10px;
+}
+
+.right-column {
+    display: flex;
+    justify-content: center;
 }
 
 
 
-span{
+
+#role-text span{
     color: var(--accent);
     font-weight: bold;
 }
 
-span:hover{
+#role-text span:hover{
     cursor: pointer;
 }
 
@@ -224,11 +227,13 @@ span:hover{
 
 /* Links & Button Container */
 .media_container{
+
     display: flex;
-    flex-direction: column;
     height: 575px;
-    justify-content:flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     align-content: center;
+    
 }
 
 
@@ -354,6 +359,7 @@ span:hover{
     text-align: center;
     margin:  0 auto;
     max-width: 1200px;
+
 }
 
 .experience h2{
@@ -367,10 +373,10 @@ span:hover{
 
 .exp-container{
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-    gap: 25px 40px;
-    padding: 20px 0;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+    gap:25px;
+    padding: 0 100px;
 }
 
 .exp-box{
@@ -416,8 +422,11 @@ span:hover{
    ===============================
 */
 .education{
-    padding: 20px 0;
+    padding: 60px 40px;
     text-align: center;
+    margin:  0 auto;
+    max-width: 1200px;
+    
 }
 
 .section-title{
@@ -497,17 +506,28 @@ footer{
 }
 
 
-/* ===============================
-    Tablet + Small Laptop Nav Fix
-   =============================== */
+/* ========================
+   Tablet / Small Laptop
+   ======================== */
 @media only screen and (max-width: 1024px) {
 
-    /* reduce huge header padding */
-    header {
-        padding: 20px 40px;
+    /* shrink wrapper padding only */
+    .site-header .wrapper {
+        padding: 0 20px;
     }
 
-    /* show hamburger */
+
+
+}
+
+/* ========================
+   Mobile + Hamburger
+   ======================== */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -515,24 +535,20 @@ footer{
         cursor: pointer;
     }
 
-    /* hide regular nav */
-    nav ul {
-        display: none;
-    }
-
-    /* dropdown */
     .nav-menu.active {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 80px;
-        right: 40px;
+        right: 20px;
         background-color: #111;
         padding: 20px;
         border-radius: 10px;
         gap: 15px;
         z-index: 999;
     }
+
+    
 }
 
 
@@ -541,9 +557,7 @@ footer{
    =============================== */
 @media only screen and (max-width: 480px) {
 
-    header{
-        
-    }
+
 
     header h1 a {
         text-align: center;
@@ -599,49 +613,47 @@ footer{
         margin: 8px 0;
     }
 
-    /* ============================================
-        Hero Section
-       ============================================ */
+/* ============================================
+    Hero Section
+============================================ */
+#hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+/* Reorder the main columns */
+.left-column { order: 1; }
+.right-column { order: 2; }
+    
 
-    #hero-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+.left-column {
+    display: contents;
+}
+    
+/* Now you can order the individual items */
+#intro-text { 
+    order: 1; 
+}
 
-    /* Force order: text first, card second */
-    .intro-text {
-        order: 1;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width: auto;
-    }
+#role-text { order: 3; }
 
-    .card {
-        order: 2;
-        width: 260px;
-        height: 350px;
-    }
-
-    /* Typewriter text adjustments */
-    .intro-text h2 {
-        font-size: 1.5em;
-        padding: 15px 0;
-    }
-
-    .intro-text p {
-        padding-top: 10px;
-        line-height: 1.3em;
-        text-align: center;
-        font-size: 1em;
-    }
-
-
-    /* Experience */
-    .exp-container{
-        grid-template-columns: 1fr;
-    }
+#media { 
+    order: 4;
+    height: fit-content; 
+    
+}
+    
+/* The card from right-column */
+.right-column {
+    display: contents;
+    
+}
+    
+#yugiohCard { 
+    order: 2; 
+    width: 260px;
+    height: 350px;
 }
 
 
@@ -649,8 +661,29 @@ footer{
 
 
 
+/* Experience */
+.exp-container{
+    grid-template-columns: 1fr;
+    padding: 0;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ============================================
-	Animations 
+	                Animations 
    ============================================
 */
 
