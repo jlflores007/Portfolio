@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Toolbar Title -->
+        <title></title>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <!-- CSS Link File-->
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/about.css">
+        <link rel="stylesheet" href="../css/art.css">
+        <link rel="stylesheet" href="../css/notes.css">
+        <link rel="stylesheet" href="../css/projects.css">
+
+         <!-- Google Fonts-->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Emblema+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <body>
+
+            <!-- Header Content -->
+            <header class="site-header">
+        <div class="wrapper">
+            <h1><a class="animate-text" href="../index.html">Snake007</a></h1>
+
+            <!-- Nav -->
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a class="animate-text" href="../index.html">Home</a></li>
+                    <li><a class="animate-text" href="../projects.html">Projects</a></li>
+                    <li><a class="animate-text" href="../notes.html">Notes</a></li>
+                    <li><a class="animate-text" href="../art.html">Art</a></li>
+                    <li><a class="animate-text" href="../about.html">About Me</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Drop Down Menu-->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+            <!-- Main Content -->
+            <main class="sqli">
+                <section>
+                    <h1>SQL Injection</h1>
+                    <p>SQL Injection enables me to read, modify, or bypass database contents, bypass login forms, or access restricted data, such as passwords or credit card numbers. </p>
+                    
+                    <div class="discovery">
+                        <h2>SQL Injection Discovery</h2>
+                        <table>
+                            <tr>
+                                <th>Character</th>
+                                <th>URL Encoded</th>
+                            </tr>
+                            <tr>
+                                <td>'</td>
+                                <td>%27</td>
+                            </tr>
+                            <tr>
+                                <td>"</td>
+                                <td>%22</td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td>%23</td>
+                            </tr>
+                            <tr>
+                                <td>;</td>
+                                <td>%38</td>
+                            </tr>
+                            <tr>
+                                <td>)</td>
+                                <td>%29</td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>%2A</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+
+
+                    <div class="auth">
+                        <h2>Authentication Bypass</h2>
+                        <div class="payload-box">
+                            <h3>Bypass Payload:</h3>
+                            <code>' OR '1'='1</code><br>
+                            <code>'-- -</code><br>
+                            <code>' OR '1'='1'-- -</code>
+                        </div>
+                    </div>
+
+
+
+                    <div class="UNION">
+                        <h2>UNION Injection</h2>
+                        <p>The UNION clause combines the results of multiple SELECT statements into one result set. </p>
+                    </div>
+
+                    <div class="enum">
+                        <h2>Database Enumeration (MySQL)</h2>
+                        <p>Coming soon...</p>
+                    </div>
+
+                    <div class="error">
+                        <h2>Database Enumeration using Error Banner (MySQL)</h2>
+                        <p>Coming soon...</p>
+                    </div>
+
+                    <div class="reading">
+                        <h2>Reading Files (MySQL)</h2>
+                        <p>Coming soon...</p>
+                    </div>
+
+                    <div class="writing">
+                        <h2>Writing Files (MySQL)</h2>
+                        <p>Coming soon...</p>
+                    </div>
+
+                </section>
+
+            </main>
+
+            <!-- Footer Content -->
+            <footer>
+                <p> Jorge Flores &copy; 2025 All Rights Reserved</p>
+            </footer>
+            <script src="js/script.js"></script>
+        </body>
+</html>

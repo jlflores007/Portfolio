@@ -5,3 +5,162 @@
 }
 
 
+.art{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+}
+
+.art h1{
+    font-size: 2.2em;
+    border-left: 2px solid var(--accent);
+    padding-left: 10px;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+.art-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 50px;
+    justify-items: center;
+}
+
+.art-grid img{
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.art-grid img:hover{
+    transform: scale(1.05);
+}
+
+
+
+.turntable {
+    width: 350px;
+    height: 350px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform .3s ease;
+}
+
+.helmet-turn {
+    background-image: url("../images/Art/helmet_1.jpg");
+}
+
+
+.helmet-turn:hover {
+    animation: helmetCycle 4s infinite steps(1);
+}
+
+@keyframes helmetCycle {
+    0%  { background-image: url("../images/Art/helmet_1.jpg"); }
+    16.66% { background-image: url("../images/Art/helmet_3.jpg"); }
+    33.33% { background-image: url("../images/Art/helmet_2.jpg"); }
+    50% { background-image: url("../images/Art/helmet_1.jpg"); }
+    66.66% { background-image: url("../images/Art/helmet_5.jpg"); }
+    83.33% { background-image: url("../images/Art/helmet_4.jpg"); }
+    100% { background-image: url("../images/Art/helmet_1.jpg"); }
+}
+
+/* Bull */
+.bull-turn{
+    background-image: url("../images/Art/bull_4.jpg");
+}
+
+.bull-turn:hover{
+    animation: bullCycle 2.5s infinite steps(1);
+}
+
+@keyframes bullCycle {
+    0% {background-image: url("../images/Art/bull_4.jpg");}
+    25% {background-image: url("../images/Art/bull_1.png");}
+    50% {background-image: url("../images/Art/bull_2.png");}
+    75% {background-image: url("../images/Art/bull_3.png");}
+    100% {background-image: url("../images/Art/bull_4.jpg");}
+}
+
+/* Axe */
+.axe-turn{
+    background-image: url("../images/Art/axe_1.jpg");
+}
+
+.axe-turn:hover{
+    animation: axeCycle 3s infinite steps(1);
+}
+
+@keyframes axeCycle {
+    0% {background-image: url("../images/Art/axe_1.jpg");}
+    25% {background-image: url("../images/Art/axe_2.jpg");}
+    50% {background-image: url("../images/Art/axe_3.jpg");}
+    75% {background-image: url("../images/Art/axe_4.jpg");}
+    100% {background-image: url("../images/Art/axe_1.jpg");}
+}
+
+/* Gun */
+.gun-turn{
+    background-image: url("../images/Art/gun_1.jpg");
+}
+
+.gun-turn:hover{
+    animation: gunCycle 3s infinite steps(1);
+}
+
+@keyframes gunCycle {
+    0% {background-image: url("../images/Art/gun_1.jpg");}
+    25% {background-image: url("../images/Art/gun_2.jpg");}
+    50% {background-image: url("../images/Art/gun_3.jpg");}
+    75% {background-image: url("../images/Art/gun_4.jpg");}
+    100% {background-image: url("../images/Art/gun_1.jpg");}
+}
+
+/* Eye */
+
+.eye-turn{
+    background-image: url("../images/Art/eye_1.jpg");
+}
+
+.eye-turn:hover{
+    animation: eyeCycle 3s infinite steps(1);
+}
+
+@keyframes eyeCycle {
+    0% {background-image: url("../images/Art/eye_1.jpg");}
+    50% {background-image: url("../images/Art/eye_2.jpg");}
+    100% {background-image: url("../images/Art/eye_1.jpg");}
+
+}
+
+/* Sketch */
+.sketch{
+    background-image: url("../images/Art/sketch_1_2.png");
+}
+
+
+/* Photography */
+
+.photography{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+}
+
+.photography h1{
+    font-size: 2.2em;
+    border-left: 2px solid var(--accent);
+    padding-left: 10px;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-align: center;
+}

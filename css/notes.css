@@ -1,0 +1,115 @@
+:root {
+    --accent: #FF4C4C;
+    --text-light: #E0E0E0;
+    --soft-outline:#ffffff; 
+}
+
+.notes-menu {
+    height: 825px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px auto;
+}
+
+.notes-menu h1 {
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 20px;
+}
+
+/* Linux directory grid layout */
+.dir-line {
+    display: grid;
+    grid-template-columns: 120px 100px 100px 80px 140px auto;
+    font-family: monospace;
+    padding-left: 25px;
+    color: #d1d5db;
+}
+
+.notes-menu ul li {
+    list-style: none;
+}
+
+/* The clickable file name */
+.file a {
+    text-decoration: underline;
+    color: #93c5fd;
+}
+
+.file a:hover {
+    color: #bfdbfe;
+}
+
+
+
+
+
+
+/* SQLI Style */
+
+.sqli{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.sqli section > div {
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+}
+
+
+.sqli h1{
+    font-size: 1.8em;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.sqli p{
+    padding: 10px 30px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.sqli h2{
+    font-size: 1.4em;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 25px;
+    border-bottom: 2px dotted var(--accent);
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 5px;
+}
+
+.sqli table{
+    
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.sqli table th,
+.sqli table td {
+    border: 1px solid var(--soft-outline);
+    padding: 8px 12px;
+    text-align: center;
+}
+
+/* Payload Box */
+.payload-box {
+    width: 300px;
+    margin: 10px auto;
+    background: #101316;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--soft-outline);
+    text-align: center;
+}
+
+.payload-box code {
+    color: var(--accent);
+    font-size: 1.1em;
+    display: block;
+    margin: 5px 0;
+}
