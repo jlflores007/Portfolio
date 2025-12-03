@@ -90,6 +90,29 @@
     100% {background-image: url("../images/Art/bull_4.jpg");}
 }
 
+/* Skull */
+.skull-turn{
+    background-image: url("../images/Art/skull_1.jpg");
+}
+
+
+.skull-turn:hover{
+    animation: skullCycle 2.5s infinite steps(1);
+}
+
+@keyframes skullCycle {
+    0% {background-image: url("../images/Art/skull_1.jpg");}
+    50% {background-image: url("../images/Art/skull_2.jpg");}
+    100% {background-image: url("../images/Art/skull_1.jpg");}
+}
+
+
+
+
+
+
+
+
 /* Axe */
 .axe-turn{
     background-image: url("../images/Art/axe_1.jpg");
