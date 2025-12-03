@@ -15,7 +15,7 @@
     justify-content: center;
     max-width: 1100px;
     margin: 0 auto;
-    height: 855px;
+    height: auto;
 
 }
 
@@ -124,35 +124,48 @@
 
 
 
-/* ===============================
-    Mobile Styles up to 480 pixels
-   =============================== */
-@media only screen and (max-width: 480px) {
 
 
+@media (max-width: 768px) {
 
-    /* ========================
-   Mobile + Hamburger
-   ======================== */
+    /* Hide desktop nav on mobile */
+    header .nav-menu {
+        display: none !important;
+    }
 
-    /* Hamburger */
-    .hamburger {
-        display: flex;
+    /* Show only when active */
+    header .nav-menu.active {
+        display: flex !important;
         flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        background: #1e1e2f;
+        padding: 20px;
+        border-radius: 8px;
+        gap: 15px;
+        z-index: 999;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex !important;
+        flex-direction: column;
+        gap: 6px;
         cursor: pointer;
-        gap: 5px;
+        z-index: 1000;
     }
 
     .hamburger span {
-        width: 25px;
+        width: 28px;
         height: 3px;
-        background-color: white;
+        background: white;
         border-radius: 2px;
-        transition: 0.3s;
+        transition: .3s ease;
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(5px, 6px);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -160,68 +173,29 @@
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(5px, -6px);
     }
 
-    /* Nav Menu */
-    .nav-menu {
-        display: none;
-    }
-
-    .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background-color: #1e1e2f;
-        padding: 20px;
-        border-radius: 8px;
-        gap: 10px;
-    }
-
-    .nav-menu.active a {
-        text-align: center;
-        margin: 8px 0;
-    }
-
-
-    /* About Me Section */
-
-    #about-me{
-     
-    }
-
-.more-container {
-    display: flex;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.more-container a img {
-    width: 35px;
-    height: 35px;
-}
-
-
-
-    /* Contact */
-    #contact{
-
-
-    }
-}
-
-
-
-@media (max-width: 768px) {
+    /* Stack About Me section */
     #about-me {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+        height: auto;
     }
 
-    .about-right h1 {
-        text-align: center;
+    #contact{
+        padding-left: 0;
+        width: 350px;
     }
+
+#contact h2{
+    text-align: center;
+} 
+
+.more-social a{
+    padding: 0 40px;
 }
+
+}
+
